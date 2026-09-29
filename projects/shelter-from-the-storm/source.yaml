@@ -1,0 +1,46 @@
+title: Shelter from the Storm
+mode: source_faithful_transcription
+
+source:
+  platform: youtube
+  canonical_url: https://www.youtube.com/watch?v=g1sy81rl6PI
+  video_id: g1sy81rl6PI
+  user_label: Shelter from the Storm
+  media_policy: local_only
+  choreography_authority: source_video
+
+motion_recovery:
+  primary: DuoMo
+  refine: HTD-Refine
+  representation: SMPL
+  preserve_world_trajectory: true
+  preserve_camera_relative_motion: true
+  preserve_timing: true
+
+retargeting:
+  allow_body_scale_change: true
+  allow_bone_length_change: true
+  preserve_joint_relations: true
+  preserve_root_path_shape: true
+  preserve_foot_contacts: true
+  preserve_turn_direction: true
+  preserve_turn_count: true
+  preserve_level_changes: true
+  preserve_dynamic_accents: true
+
+repair:
+  engine: CustomDance
+  mode: low_confidence_only
+  confidence_threshold: 0.55
+  lock_high_confidence_source_motion: true
+  forbid_phrase_rewrite: true
+
+objective:
+  pose: 0.18
+  velocity: 0.20
+  acceleration: 0.18
+  root_trajectory: 0.16
+  contact: 0.12
+  musical_phase: 0.07
+  facing: 0.05
+  level: 0.04
