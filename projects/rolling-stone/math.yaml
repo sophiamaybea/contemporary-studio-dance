@@ -1,0 +1,30 @@
+project: Rolling Stone
+mode: exact_source_transcription
+
+state:
+  source_motion: "X_s(t)"
+  reconstructed_motion: "X_r(t)"
+
+loss:
+  equation: |
+    L = 0.18 L_pose
+      + 0.20 L_velocity
+      + 0.18 L_acceleration
+      + 0.16 L_root
+      + 0.12 L_contact
+      + 0.07 L_phase
+      + 0.05 L_facing
+      + 0.04 L_level
+
+constraints:
+  - "Do not generate new choreography where source confidence is high."
+  - "Preserve source timing exactly after frame-rate normalisation."
+  - "Preserve root-path topology and turn direction."
+  - "Preserve floor/foot contact sequence."
+  - "Preserve velocity and acceleration signatures, not only poses."
+  - "Use CustomDance only inside repair-mask intervals."
+
+repair_mask:
+  equation: "R(t) = 1[confidence(t) < 0.55]"
+  high_confidence_action: lock
+  low_confidence_action: interpolate_or_repair
