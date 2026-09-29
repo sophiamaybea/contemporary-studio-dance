@@ -1,0 +1,37 @@
+{
+  "song": "Shelter from the Storm",
+  "artist": "Globus",
+  "mode": "source_faithful_transcription",
+  "source_url": "https://www.youtube.com/watch?v=g1sy81rl6PI",
+  "video_id": "g1sy81rl6PI",
+  "representation": "SMPL",
+  "identity": "locked red-haired cutout dancer (freckled, athletic, headphones, black sheer crop + long skirt)",
+  "constraints": [
+    "Do not generate new choreography where source confidence is high",
+    "Preserve source timing exactly after frame-rate normalisation",
+    "Preserve root-path topology and turn direction",
+    "Preserve floor/foot contact sequence",
+    "Preserve velocity and acceleration signatures",
+    "Use CustomDance only inside repair-mask intervals (confidence < 0.55)"
+  ],
+  "loss_weights": {
+    "pose": 0.18,
+    "velocity": 0.20,
+    "acceleration": 0.18,
+    "root_trajectory": 0.16,
+    "contact": 0.12,
+    "musical_phase": 0.07,
+    "facing": 0.05,
+    "level": 0.04
+  },
+  "events": [
+    {
+      "id": "source_phrase_1",
+      "t0": 0.0,
+      "t1": 15.0,
+      "section": "opening_response",
+      "note": "line-by-line lyric matching, precise freezes, torso initiation"
+    }
+  ],
+  "source": "projects/shelter-from-the-storm"
+}

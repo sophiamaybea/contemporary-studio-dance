@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "source": "cutout asset 7bbc1918-9ce0-4f09-9267-fb296dc6a9d5 + night studio composites",
+    "hair": "voluminous long red curly",
+    "skin": "fair warm freckled pore texture",
+    "body": "athletic hourglass long legs",
+    "outfit": "black sheer cropped top + long black asymmetrical lace skirt, headphones, barefoot"
+  },
+  "movement": {
+    "source": "AGENT_SCORE.json + source video recovery",
+    "style": "source-faithful contemporary (Holly Stubbings / Globus)",
+    "mode": "exact_source_transcription"
+  },
+  "space": "dark night studio with moonlight and soft practicals (or rain when matching source)"
+}
