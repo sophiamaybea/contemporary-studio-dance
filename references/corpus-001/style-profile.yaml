@@ -1,0 +1,38 @@
+name: reference-corpus-001
+
+dialects:
+  FLOAT: 0.78
+  FRACTURE: 0.66
+  RELEASE: 0.82
+  TRAVEL: 0.84
+
+features:
+  torso_initiation: 0.86
+  spiral: 0.92
+  asymmetry: 0.90
+  weight_transfer: 0.93
+  extension_amplitude: 0.88
+  floorwork: 0.74
+  level_changes: 0.91
+  off_axis_balance: 0.80
+  curved_arm_pathways: 0.88
+  limb_lag: 0.78
+  suspension: 0.90
+  collapse: 0.78
+  rebound: 0.84
+  acceleration_change: 0.91
+  travelling: 0.88
+  momentum_causality: 0.96
+  groove: 0.66
+  eccentricity: 0.74
+  gesture_evolution: 0.72
+  virtuosity: 0.72
+
+avoid:
+  - generic lyrical choreography
+  - obvious eight-count construction
+  - pose-reset-pose phrasing
+  - decorative symmetrical arm waves
+  - trick-for-trick's-sake
+  - literal lyric mime
+  - repeated symmetrical resolution
