@@ -1,0 +1,30 @@
+title: The Night They Drove Old Dixie Down
+format: solo contemporary dance
+profile: references/corpus-001/style-profile.yaml
+
+intent: |
+  Create an original solo contemporary-dance work driven by resistance,
+  exhaustion, memory, instability and persistence.
+
+  Do not illustrate lyrics literally. Let the body repeatedly attempt to
+  travel, rise, open or continue and then be redirected by weight, momentum
+  or an interruption.
+
+  Alternate small human-scale gestures with large releases. Use technical
+  movement, extensions and turns when they emerge from the causal flow of a
+  phrase. Preserve oddness, groove and moments of deliberate awkwardness.
+  Do not make the work relentlessly mournful or conventionally lyrical.
+
+anchors:
+  - id: opening
+    dialect_mix: {FLOAT: 0.15, FRACTURE: 0.15, RELEASE: 0.45, TRAVEL: 0.25}
+    local_intent: "Almost still. Imperfect weight distribution. Tiny internal initiation becomes the first travel."
+  - id: first_expansion
+    dialect_mix: {FLOAT: 0.40, FRACTURE: 0.20, RELEASE: 0.15, TRAVEL: 0.25}
+    local_intent: "Stored momentum releases into travelling, suspension and one off-axis technical event with no reset."
+  - id: middle_floor
+    dialect_mix: {FLOAT: 0.10, FRACTURE: 0.20, RELEASE: 0.55, TRAVEL: 0.15}
+    local_intent: "A failed lunge becomes floor contact; use slide, fold, redirect and rebound rather than a prepared kneel."
+  - id: final_build
+    dialect_mix: {FLOAT: 0.30, FRACTURE: 0.25, RELEASE: 0.20, TRAVEL: 0.25}
+    local_intent: "Combine all dialects. Allow groove and peculiar gesture between larger phrases. Finish smaller than expected."
