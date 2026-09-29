@@ -1,0 +1,137 @@
+title: Hot Burrito #1
+format: solo contemporary dance
+profile: references/corpus-001/style-profile.yaml
+
+intent: |
+  Create an original solo contemporary-dance work for "Hot Burrito #1"
+  using the movement language of Reference Corpus 001.
+
+  The emotional centre is intimate rather than theatrical: a person trying
+  to stay composed while tenderness, humiliation, longing and anger keep
+  leaking through the body.
+
+  Do not mime lyrics. Do not perform heartbreak literally. Avoid clutching
+  the chest, reaching pleadingly toward an imaginary partner, kneeling in
+  despair, or using generic lyrical-dance sorrow.
+
+  Keep the body physically intelligent and slightly strange.
+
+  The choreography should live in the tension between restraint and loss
+  of control. Much of the movement should begin small: weight shifts,
+  rib displacement, a wrist that refuses to settle, a shoulder arriving
+  late, a foot tracing an unnecessary path, a head turn that pulls the
+  torso off-axis.
+
+  Let these small disturbances accumulate until they become large movement.
+
+  Use long extensions, turns and suspensions, but never present them as
+  detached tricks. A technical event should be caused by momentum, imbalance,
+  resistance or a previous gesture.
+
+  Allow moments of groove underneath the phrase: weighted knees, soft foot
+  rhythm, a slight drag through the pelvis, movement that sits just behind
+  the beat. The dance should sometimes feel almost casual before it suddenly
+  opens into something enormous.
+
+  Prioritise:
+    - delayed limbs
+    - torso-led spirals
+    - off-axis balances
+    - interrupted pathways
+    - asymmetry
+    - weighted walking
+    - suspended turns
+    - crooked shapes
+    - small human gestures that infect the whole body
+    - sudden changes in scale
+    - stillness after emotional overload
+
+  The dancer should not look "sad" for the entire piece. Include irritation,
+  disbelief, self-consciousness, humour, stubbornness and moments of almost
+  ordinary behaviour.
+
+  The final image should feel unresolved and human, not tragic or triumphant.
+
+anchors:
+  - id: opening_restraint
+    dialect_mix: {FLOAT: 0.35, FRACTURE: 0.20, RELEASE: 0.15, TRAVEL: 0.30}
+    local_intent: |
+      Begin almost casually. Weight mostly in one hip, knees soft, one arm
+      slightly late to the body. Let a tiny wrist or shoulder action recur.
+      Avoid immediately signalling grief. The first phrase should feel like
+      someone pretending they are fine.
+
+  - id: first_unravelling
+    dialect_mix: {FLOAT: 0.30, FRACTURE: 0.35, RELEASE: 0.15, TRAVEL: 0.20}
+    local_intent: |
+      Let the repeated small gesture start disrupting the torso. A rib shift
+      becomes a spiral, the spiral displaces the pelvis, and a catch step
+      prevents a fall. Introduce asymmetry and a slightly awkward directional
+      change. Keep the movement contained but no longer tidy.
+
+  - id: first_opening
+    dialect_mix: {FLOAT: 0.50, FRACTURE: 0.15, RELEASE: 0.10, TRAVEL: 0.25}
+    local_intent: |
+      Permit one large suspended phrase: a long extension or off-axis turn
+      that seems to emerge accidentally from accumulated momentum. Let the
+      shape become beautiful for only a moment before redirecting it.
+
+  - id: groove_section
+    dialect_mix: {FLOAT: 0.15, FRACTURE: 0.25, RELEASE: 0.15, TRAVEL: 0.45}
+    local_intent: |
+      Bring the dance down into the feet and knees. Use weighted walking,
+      subtle bounce, soft foot rhythm and peculiar small gestures. Let the
+      dancer move slightly behind the beat. Keep this human and almost
+      conversational rather than virtuosic.
+
+  - id: emotional_break
+    dialect_mix: {FLOAT: 0.20, FRACTURE: 0.35, RELEASE: 0.35, TRAVEL: 0.10}
+    local_intent: |
+      The restraint breaks. A torso contraction or interrupted reach should
+      throw the dancer off balance and initiate a low phrase. Floor contact
+      must happen because momentum requires it, not because the choreography
+      decides to kneel. Use fold, slide, catch, recoil and rebound.
+
+  - id: recovery_without_resolution
+    dialect_mix: {FLOAT: 0.35, FRACTURE: 0.25, RELEASE: 0.15, TRAVEL: 0.25}
+    local_intent: |
+      Rise without becoming triumphant. Reuse fragments of the opening
+      gesture, but altered. Let a long line appear and fail to settle.
+      Keep one body part slightly unresolved after the rest becomes quiet.
+
+motifs:
+  - name: delayed_wrist
+    description: |
+      A small wrist rotation begins as an almost ordinary gesture. The elbow
+      follows late, then the shoulder, then the ribs. Across the piece this
+      grows from tiny behaviour into full-body redirection.
+
+  - name: almost_step
+    description: |
+      The dancer begins an ordinary step, hesitates, lets the pelvis drift
+      beyond the base of support, then catches the imbalance with a different
+      foot than expected.
+
+  - name: beautiful_then_wrong
+    description: |
+      A long technical line or suspension appears briefly, then one joint
+      breaks the geometry and sends the phrase somewhere less polished.
+
+critic_overrides:
+  reward:
+    delayed_arrival: high
+    eccentricity: high
+    groove: medium_high
+    momentum_causality: very_high
+    gesture_evolution: very_high
+    suspension: high
+    asymmetry: very_high
+
+  penalise:
+    generic_lyrical: very_high
+    literal_lyric_mime: very_high
+    pose_reset_pose: very_high
+    symmetrical_resolution: high
+    chest_clutching: very_high
+    pleading_reach: very_high
+    melodramatic_floor_pose: very_high
