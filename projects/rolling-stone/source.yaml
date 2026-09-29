@@ -10,8 +10,20 @@ source:
   choreography_authority: source_video
 
 motion_recovery:
-  primary: DuoMo
-  refine: HTD-Refine
+  primary_path:
+    engine: DuoMo
+    purpose: world_space_motion_estimation
+  dynamics_refined_path:
+    initialiser: GVHMR
+    refiner: HTD-Refine
+    purpose: preserve_velocity_and_acceleration_structure
+  selection:
+    mode: confidence_and_fidelity
+    compare_reprojection: true
+    compare_root_trajectory: true
+    compare_contacts: true
+    compare_velocity: true
+    compare_acceleration: true
   representation: SMPL
   preserve_world_trajectory: true
   preserve_camera_relative_motion: true
