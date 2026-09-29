@@ -1,1 +1,127 @@
-$(cat /workspace/artifacts/dance/hot-burrito-1/AGENT_SCORE.json)
+{
+  "song": "Hot Burrito #1",
+  "artist": "The Flying Burrito Brothers",
+  "version": "1969 album The Gilded Palace of Sin",
+  "duration_s": 217,
+  "bpm": 78,
+  "meter": "4/4",
+  "eighths": "straight",
+  "body_pulse": "half-time",
+  "style_axis": ["contemporary", "FLOAT", "FRACTURE", "RELEASE", "TRAVEL"],
+  "identity": "locked dancer from reference cutout (red curly hair, athletic, freckled, black sheer outfit, headphones, barefoot)",
+  "events": [
+    {
+      "id": "opening_restraint_1",
+      "t0": 0.0,
+      "t1": 6.15,
+      "section": "composure",
+      "support_foot": "L",
+      "facing_yaw": 0,
+      "travel_m": [0, 0, 0],
+      "joints": {
+        "right_wrist": "rotation_small_delay_90ms",
+        "right_elbow": "late_follow",
+        "left_hip": "weight_bias",
+        "spine": "soft_off_axis_5deg"
+      },
+      "motif": "delayed_wrist",
+      "dialect_mix": {"FLOAT": 0.35, "FRACTURE": 0.20, "RELEASE": 0.15, "TRAVEL": 0.30}
+    },
+    {
+      "id": "first_unravelling",
+      "t0": 18.0,
+      "t1": 24.15,
+      "section": "disturbance",
+      "support_foot": "L",
+      "facing_yaw": -30,
+      "travel_m": [0.3, 0, 0],
+      "joints": {
+        "right_wrist": "propagation_start",
+        "ribs": "spiral_left",
+        "pelvis": "late_follow",
+        "left_foot": "catch_step"
+      },
+      "motif": "delayed_wrist",
+      "dialect_mix": {"FLOAT": 0.30, "FRACTURE": 0.35, "RELEASE": 0.15, "TRAVEL": 0.20}
+    },
+    {
+      "id": "first_opening",
+      "t0": 34.0,
+      "t1": 40.15,
+      "section": "opening",
+      "support_foot": "L",
+      "facing_yaw": 15,
+      "travel_m": [0, 0.4, 0],
+      "joints": {
+        "right_leg": "long_extension_off_axis",
+        "spine": "suspension",
+        "right_wrist": "fracture_240ms"
+      },
+      "motif": "beautiful_then_wrong",
+      "dialect_mix": {"FLOAT": 0.50, "FRACTURE": 0.15, "RELEASE": 0.10, "TRAVEL": 0.25}
+    },
+    {
+      "id": "groove",
+      "t0": 50.0,
+      "t1": 62.3,
+      "section": "groove",
+      "support_foot": "alternating",
+      "facing_yaw": 45,
+      "travel_m": [1.2, 0.8, 0],
+      "joints": {
+        "knees": "weighted_soft",
+        "pelvis": "drag_behind_beat",
+        "left_hand": "peculiar_small_gesture"
+      },
+      "motif": "almost_step",
+      "dialect_mix": {"FLOAT": 0.15, "FRACTURE": 0.25, "RELEASE": 0.15, "TRAVEL": 0.45}
+    },
+    {
+      "id": "emotional_break",
+      "t0": 68.0,
+      "t1": 80.3,
+      "section": "break",
+      "support_foot": "hands_then_feet",
+      "facing_yaw": -20,
+      "travel_m": [0, -0.6, -0.4],
+      "joints": {
+        "torso": "contraction_then_fold",
+        "spine": "low_spiral",
+        "hands": "floor_first"
+      },
+      "motif": "beautiful_then_wrong",
+      "dialect_mix": {"FLOAT": 0.20, "FRACTURE": 0.35, "RELEASE": 0.35, "TRAVEL": 0.10}
+    },
+    {
+      "id": "unresolved_end",
+      "t0": 200.0,
+      "t1": 217.0,
+      "section": "unresolved_end",
+      "support_foot": "L",
+      "facing_yaw": 20,
+      "travel_m": [0, 0, 0],
+      "joints": {
+        "right_wrist": "micro_motion_after_still",
+        "spine": "quiet",
+        "head": "soft_off_camera"
+      },
+      "motif": "delayed_wrist",
+      "dialect_mix": {"FLOAT": 0.35, "FRACTURE": 0.25, "RELEASE": 0.15, "TRAVEL": 0.25}
+    }
+  ],
+  "motifs": {
+    "delayed_wrist": {
+      "propagation_delays_ms": [0, 90, 170, 260, 360, 480],
+      "scale_growth": [0.08, 0.10, 0.16, 0.30, 0.52, 0.78]
+    },
+    "almost_step": {
+      "support_margin_curve": [0.40, 0.18, 0.03, -0.08, 0.04, 0.32]
+    },
+    "beautiful_then_wrong": {
+      "extension_peak": 0.94,
+      "suspension_peak": 0.90,
+      "fracture_delay_ms": 240
+    }
+  },
+  "source": "projects/hot-burrito-1 from contemporary-studio-dance + Corpus 001"
+}

@@ -1,1 +1,19 @@
-$(cat /workspace/artifacts/dance/hot-burrito-1/performance.json)
+{
+  "identity": {
+    "source": "reference cutout asset 7bbc1918-9ce0-4f09-9267-fb296dc6a9d5 + studio composite",
+    "hair": "voluminous long red curly",
+    "eyes": "dark, expressive",
+    "skin": "fair warm with freckles, pore texture",
+    "body": "athletic hourglass, long legs, defined abs, barefoot",
+    "outfit": "black sheer cropped top + asymmetrical tied skirt with lace, black headphones"
+  },
+  "voice": null,
+  "skin": "photoreal freckled, natural SSS",
+  "movement": {
+    "source": "AGENT_SCORE.json",
+    "style": "contemporary Corpus 001",
+    "height_m": 1.75,
+    "proportions": "long line,  professional contemporary"
+  },
+  "space": "sunlit contemporary studio, wooden floor, barre, mirrors, grand piano"
+}
