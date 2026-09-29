@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+
+# Private/copyrighted reference media
+references/**/media/
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+
+# Large models / datasets / generated output
+vendor/CustomDance/
+data/
+models/
+checkpoints/
+outputs/
+*.pkl
+*.npy
+*.npz
