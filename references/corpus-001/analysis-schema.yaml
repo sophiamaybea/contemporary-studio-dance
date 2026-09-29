@@ -1,0 +1,44 @@
+clip:
+  id: string
+  source:
+    local_only: true
+    filename: string
+    notes: string
+
+observations:
+  initiation:
+    dominant_sources: []
+    torso_precedence: 0.0
+  weight:
+    groundedness: 0.0
+    off_axis_frequency: 0.0
+    catch_fall_frequency: 0.0
+  levels:
+    floorwork: 0.0
+    level_change_frequency: 0.0
+  pathways:
+    travelling: 0.0
+    curvature: 0.0
+    diagonals: 0.0
+  limbs:
+    asymmetry: 0.0
+    lag: 0.0
+    extension_amplitude: 0.0
+    crookedness: 0.0
+  dynamics:
+    suspension: 0.0
+    collapse: 0.0
+    rebound: 0.0
+    acceleration_change: 0.0
+  musicality:
+    selective_accents: 0.0
+    delayed_arrival: 0.0
+    anticipation: 0.0
+    phrase_spanning: 0.0
+  transitions:
+    momentum_causality: 0.0
+    visible_resets: 0.0
+  personality:
+    groove: 0.0
+    eccentricity: 0.0
+    gesture_evolution: 0.0
