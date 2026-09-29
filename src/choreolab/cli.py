@@ -8,6 +8,7 @@ import yaml
 
 from .critic import StyleCritic
 from .customdance_adapter import CustomDanceAdapter
+from .reference_analyzer import write_analysis
 from .schema import Candidate, StyleProfile
 
 
@@ -35,6 +36,11 @@ def cmd_score(args):
     print(json.dumps(evaluation.model_dump(), indent=2))
 
 
+def cmd_analyse_npz(args):
+    path = write_analysis(args.input, args.output, fps=args.fps)
+    print(path)
+
+
 def main():
     parser = argparse.ArgumentParser(prog="choreolab")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -50,6 +56,15 @@ def main():
     p.add_argument("--candidate", required=True)
     p.add_argument("--threshold", type=float, default=0.72)
     p.set_defaults(func=cmd_score)
+
+    p = sub.add_parser(
+        "analyse-npz",
+        help="Measure kinematics from extracted 3D joint positions.",
+    )
+    p.add_argument("--input", required=True)
+    p.add_argument("--output", default="outputs/reference-analysis.json")
+    p.add_argument("--fps", type=float, default=None)
+    p.set_defaults(func=cmd_analyse_npz)
 
     args = parser.parse_args()
     args.func(args)
