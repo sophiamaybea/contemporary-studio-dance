@@ -1,0 +1,23 @@
+id: example-motion-001
+flags: []
+features:
+  torso_initiation: 0.82
+  spiral: 0.90
+  asymmetry: 0.88
+  weight_transfer: 0.91
+  extension_amplitude: 0.81
+  floorwork: 0.70
+  level_changes: 0.87
+  off_axis_balance: 0.79
+  curved_arm_pathways: 0.85
+  limb_lag: 0.76
+  suspension: 0.88
+  collapse: 0.72
+  rebound: 0.82
+  acceleration_change: 0.90
+  travelling: 0.86
+  momentum_causality: 0.94
+  groove: 0.62
+  eccentricity: 0.70
+  gesture_evolution: 0.69
+  virtuosity: 0.70
