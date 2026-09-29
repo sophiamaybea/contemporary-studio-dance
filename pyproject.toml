@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "contemporary-choreography-lab"
+version = "0.1.0"
+description = "Reference-driven contemporary choreography analysis and CustomDance orchestration."
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pydantic>=2.7",
+  "PyYAML>=6.0"
+]
+
+[project.scripts]
+choreolab = "choreolab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
