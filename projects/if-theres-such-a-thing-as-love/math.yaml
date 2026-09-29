@@ -1,0 +1,148 @@
+project: If There's Such a Thing as Love
+artist: The Magnetic Fields
+
+state_dimensions:
+  - certainty
+  - attraction
+  - avoidance
+  - instability
+  - extension
+  - eccentricity
+  - orbit
+  - release
+
+# u is normalised musical time in [0, 1]. These are dramaturgical targets;
+# the music analyser should warp u to detected musical sections and events.
+phases:
+  - name: hypothesis
+    u: 0.00
+    target:
+      certainty: 0.28
+      attraction: 0.44
+      avoidance: 0.52
+      instability: 0.24
+      extension: 0.20
+      eccentricity: 0.34
+      orbit: 0.18
+      release: 0.10
+
+  - name: evidence_appears
+    u: 0.16
+    target:
+      certainty: 0.54
+      attraction: 0.62
+      avoidance: 0.34
+      instability: 0.38
+      extension: 0.64
+      eccentricity: 0.40
+      orbit: 0.34
+      release: 0.18
+
+  - name: doubt
+    u: 0.31
+    target:
+      certainty: 0.24
+      attraction: 0.58
+      avoidance: 0.68
+      instability: 0.64
+      extension: 0.36
+      eccentricity: 0.72
+      orbit: 0.48
+      release: 0.28
+
+  - name: orbit
+    u: 0.47
+    target:
+      certainty: 0.42
+      attraction: 0.78
+      avoidance: 0.62
+      instability: 0.48
+      extension: 0.52
+      eccentricity: 0.58
+      orbit: 0.94
+      release: 0.24
+
+  - name: temporary_proof
+    u: 0.64
+    target:
+      certainty: 0.90
+      attraction: 0.86
+      avoidance: 0.12
+      instability: 0.44
+      extension: 0.94
+      eccentricity: 0.34
+      orbit: 0.58
+      release: 0.34
+
+  - name: contradiction
+    u: 0.79
+    target:
+      certainty: 0.18
+      attraction: 0.66
+      avoidance: 0.74
+      instability: 0.90
+      extension: 0.28
+      eccentricity: 0.76
+      orbit: 0.32
+      release: 0.88
+
+  - name: unresolved_equilibrium
+    u: 1.00
+    target:
+      certainty: 0.46
+      attraction: 0.52
+      avoidance: 0.48
+      instability: 0.28
+      extension: 0.18
+      eccentricity: 0.40
+      orbit: 0.26
+      release: 0.16
+
+equations:
+  state: "X(t) = [certainty, attraction, avoidance, instability, extension, eccentricity, orbit, release]"
+  contradiction: "Q(t) = attraction(t) * avoidance(t)"
+  conviction: "B(t) = certainty(t) * (1 - avoidance(t))"
+  orbit_radius: "r(t) = ||c_xy(t) - p*||"
+  orbit_without_arrival: "O = path_curvature * recurrence(p*) * (1 - dwell_at(p*))"
+  approach_withdrawal: "A_w(t) = dot(v_com(t), unit(p* - c(t)))"
+  delayed_decision: "D = argmax_tau corr(torso_intent(t), distal_commitment(t + tau))"
+  proof_then_error: "E = coherence_peak(t0) * fracture(t0 + delta), delta in [0.15, 0.40]s"
+  uncertainty_energy: "U(t) = 4 * certainty(t) * (1 - certainty(t))"
+  objective: "J = music_fit + momentum + weight_logic + asymmetry + limb_lag + spatial_recurrence + contradiction_control + interestingness - cliche_penalties"
+
+spatial_model:
+  attractor_point:
+    symbol: "p*"
+    rule: |
+      Choose one stage point after analysing the opening phrase. Revisit its
+      neighbourhood throughout the dance, but delay actual occupancy.
+  arrival_penalty:
+    rule: |
+      Penalise dwelling at p* before the temporary_proof phase. Near-misses
+      score higher than direct arrival.
+  path_curvature:
+    target: high
+
+motif_dynamics:
+  proposition:
+    certainty_gate: 0.55
+    torso_to_distal_delay_ms: [0, 120, 230, 360]
+    failure_probability_curve: [0.55, 0.42, 0.68, 0.28, 0.74]
+
+  orbit_without_arrival:
+    radius_sequence_body_scales: [1.8, 1.35, 0.95, 0.62, 1.10, 0.48]
+    direction_sequence: [cw, cw, ccw, cw, ccw, cw]
+    dwell_at_centre_seconds: 0.0
+
+  proof_then_error:
+    coherence_peak: 0.94
+    extension_peak: 0.92
+    fracture_delay_ms: 260
+    fracture_priority: [wrist, elbow, ribs, head]
+
+constraints:
+  - "No literal romance mime."
+  - "No repeated yearning reach."
+  - "No choreographic answer to the title question."
+  - "Large technical movement must inherit momentum from the prior phrase."
+  - "Floor contact must be mechanically caused."
