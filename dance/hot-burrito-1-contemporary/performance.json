@@ -1,0 +1,39 @@
+{
+  "identity": {
+    "subject": "Sophia",
+    "lock": "looks-like-me",
+    "year": 2026,
+    "face": "fair warm freckled, hazel green-gold eyes, medium-brown curly hair in messy bun",
+    "body": "5'9 athletic hourglass, long legs, 24 waist, 35 hips",
+    "outfit": "plain black track jacket (no logos/stripes), short black dance shorts, pointe shoes, no tights, bare legs",
+    "hair": "messy high bun with loose face strands"
+  },
+  "voice": {
+    "role": "studio count-caller",
+    "accent": "British-leaning natural young woman",
+    "style": "clear, unfiltered, professional studio"
+  },
+  "skin": {
+    "albedo": "fair warm with dense individual freckles",
+    "texture": "pore-scale visible, no beauty filter"
+  },
+  "movement": {
+    "source": "AGENT_SCORE.json",
+    "style_axis": "contemporary primary + ballet secondary",
+    "footwear": "pointe",
+    "height_m": 1.75,
+    "notes": "long line arabesques, spiral initiations, floor recoveries; half-time body pulse on verses"
+  },
+  "space": {
+    "type": "contemporary studio",
+    "floor": "sprung wood",
+    "size_m": [8, 8]
+  },
+  "song": {
+    "title": "Hot Burrito #1",
+    "artist": "The Flying Burrito Brothers",
+    "bpm": 156,
+    "duration_s": 217,
+    "meter": "4/4"
+  }
+}
