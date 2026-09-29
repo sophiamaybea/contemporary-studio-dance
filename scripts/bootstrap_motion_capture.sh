@@ -20,8 +20,10 @@ clone_pin () {
 
 clone_pin "https://github.com/facebookresearch/DuoMo.git"   "vendor/DuoMo"   "cfc1cdc44368228438ff579158f19e135173fa42"
 
+clone_pin "https://github.com/zju3dv/GVHMR.git"   "vendor/GVHMR"   "ee960bb6e2ea2d381aa97f08e9b71ef320b624b1"
+
 clone_pin "https://github.com/ant-research/HTD-Refine.git"   "vendor/HTD-Refine"   "2fcd6ddef3c4eb75a636062245f80a0136c09b7e"
 
 echo
 echo "Motion-capture sources are pinned."
-echo "Follow each upstream README for environment, checkpoints and SMPL/SMPL-X assets."
+echo "Follow each upstream README for its environment, checkpoints and SMPL/SMPL-X assets."
