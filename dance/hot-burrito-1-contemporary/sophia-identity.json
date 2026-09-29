@@ -1,0 +1,31 @@
+{
+  "subject": "Sophia",
+  "lock": "looks-like-me",
+  "year": 2026,
+  "lead_assets": {
+    "hair": "looks-like-me/assets/face/canonical-curly-hair.jpg",
+    "face_closeup": "looks-like-me/assets/face/canonical-closeup-2026.jpg",
+    "face_night": "looks-like-me/assets/face/canonical-night-2026.jpg",
+    "headshot_sheet": "looks-like-me/assets/face/canonical-headshot-sheet-2026.jpg",
+    "body_proportions_only": [
+      "looks-like-me/assets/body/body-bikini-2026.jpg",
+      "looks-like-me/assets/body/body-standing-leather-2026.jpg",
+      "looks-like-me/assets/body/body-standing-home-2026.jpg"
+    ]
+  },
+  "retired_as_lead": [
+    "canonical-neutral.jpg",
+    "canonical-smile.jpg",
+    "canonical-red-jacket.jpg",
+    "pearl-closeup.jpg"
+  ],
+  "face": {
+    "skin": "fair warm, visible texture, dense individual freckles across nose cheeks under-eyes forehead",
+    "eyes": "hazel: green-gold around pupil, olive-brown outer iris, dark limbal ring",
+    "brows": "medium-dark brown, fuller than the retired blonde set, soft arch, not microbladed",
+    "nose": "straight, defined bridge, softly rounded tip",
+    "lips": "medium-full, defined cupid's bow, fuller lower lip, natural rose",
+    "jaw": "soft oval, gentle jaw, a little cheekbone, rounded chin",
+    "hair": "voluminous loose-to-medium curls, medium brown with caramel highlights, about shoulder length"
+  }
+}

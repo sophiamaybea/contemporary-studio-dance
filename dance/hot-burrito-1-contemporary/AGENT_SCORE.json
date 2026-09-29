@@ -1,0 +1,250 @@
+{
+  "schema": "dance-routine-engine.agent-model-score.v1",
+  "slug": "hot-burrito-1-contemporary",
+  "consumer": "animation-agent",
+  "track": {
+    "title": "Hot Burrito #1",
+    "artist": "The Flying Burrito Brothers",
+    "version": "album / The Gilded Palace of Sin 1969",
+    "duration_sec": 217,
+    "bpm": 156,
+    "bpm_source": "published",
+    "meter": "4/4",
+    "grid": "straight",
+    "swing_ratio": null
+  },
+  "body": {
+    "identity": "Sophia",
+    "height_m": 1.75,
+    "rig_pref": ["mixamo", "smplx", "blender-human"],
+    "footwear": "pointe"
+  },
+  "space": {
+    "width_m": 8,
+    "depth_m": 8,
+    "floor": "sprung"
+  },
+  "motifs": [
+    { "id": "A", "label": "arabesque high left + right arm 5th (showed you how)", "returns_in": ["verse1", "chorus1", "final"] },
+    { "id": "B", "label": "breath collapse crouch + sequential spine + tilt turn", "returns_in": ["chorus1", "chorus2"] },
+    { "id": "C", "label": "parallel chassé lagging arm + still relevé", "returns_in": ["verse3"] },
+    { "id": "D", "label": "lateral shoulder roll → knee hover → push stand", "returns_in": ["verse3"] }
+  ],
+  "form": [
+    { "id": "intro", "t0": 0.0, "t1": 12.3, "bar0": 1, "section": "intro", "body_job": "still+breath" },
+    { "id": "verse1", "t0": 12.3, "t1": 37.0, "bar0": 7, "section": "verse1", "body_job": "establish A" },
+    { "id": "verse2", "t0": 37.0, "t1": 61.5, "bar0": 20, "section": "verse2", "body_job": "travel+spiral" },
+    { "id": "chorus1", "t0": 61.5, "t1": 86.2, "bar0": 33, "section": "chorus1", "body_job": "elevate A peak" },
+    { "id": "verse3", "t0": 86.2, "t1": 110.8, "bar0": 46, "section": "verse3", "body_job": "collapse floor D" },
+    { "id": "chorus2", "t0": 110.8, "t1": 135.4, "bar0": 59, "section": "chorus2", "body_job": "recap invert" },
+    { "id": "bridge", "t0": 135.4, "t1": 160.0, "bar0": 72, "section": "bridge", "body_job": "still task" },
+    { "id": "final", "t0": 160.0, "t1": 184.6, "bar0": 85, "section": "final", "body_job": "full motif wreck" },
+    { "id": "outro", "t0": 184.6, "t1": 217.0, "bar0": 98, "section": "outro", "body_job": "empty exit" }
+  ],
+  "events": [
+    {
+      "id": "E001",
+      "t0": 0.0,
+      "t1": 3.08,
+      "beat0": 1,
+      "beat1": 8,
+      "bar": 1,
+      "count": "1-8",
+      "support": "both",
+      "weight_l": 0.5,
+      "level": "stand",
+      "facing_yaw": 0,
+      "root_xz": [0.0, 0.0],
+      "travel": [0.0, 0.0],
+      "initiation": "Breath",
+      "joints": [
+        { "joint": "Hips", "op": "hold", "axis": "y", "deg": 0, "amp": 0.0 },
+        { "joint": "Spine", "op": "breathe", "axis": "y", "deg": 5, "amp": 0.3 }
+      ],
+      "ease": "ease-in-out",
+      "energy": 0.2,
+      "style": "contemporary",
+      "gloss": "intro still breath centre"
+    },
+    {
+      "id": "E010",
+      "t0": 12.3,
+      "t1": 15.4,
+      "beat0": 1,
+      "beat1": 4,
+      "bar": 7,
+      "count": "1-4",
+      "support": "left",
+      "weight_l": 0.8,
+      "level": "stand",
+      "facing_yaw": 0,
+      "root_xz": [0.0, 0.5],
+      "travel": [0.0, 0.8],
+      "initiation": "Spiral",
+      "joints": [
+        { "joint": "Spine", "op": "rotate", "axis": "y", "deg": 30, "amp": 0.6 },
+        { "joint": "RightArm", "op": "reach", "axis": "y", "deg": 90, "amp": 0.7 }
+      ],
+      "ease": "linear",
+      "energy": 0.45,
+      "style": "hybrid",
+      "gloss": "verse1 walk spiral + tendu prepare"
+    },
+    {
+      "id": "E011",
+      "t0": 15.4,
+      "t1": 18.5,
+      "beat0": 5,
+      "beat1": 8,
+      "bar": 8,
+      "count": "5-8",
+      "support": "right",
+      "weight_l": 0.2,
+      "level": "stand",
+      "facing_yaw": -20,
+      "root_xz": [0.0, 0.8],
+      "travel": [0.0, 0.0],
+      "initiation": "Proximal",
+      "joints": [
+        { "joint": "LeftLeg", "op": "arabesque", "axis": "x", "deg": -90, "amp": 0.9 },
+        { "joint": "RightArm", "op": "high5th", "axis": "y", "deg": 160, "amp": 0.85 }
+      ],
+      "ease": "ease-out",
+      "energy": 0.7,
+      "style": "ballet-contemporary",
+      "gloss": "Motif A arabesque seed"
+    },
+    {
+      "id": "E030",
+      "t0": 61.5,
+      "t1": 64.6,
+      "beat0": 1,
+      "beat1": 4,
+      "bar": 33,
+      "count": "1-4",
+      "support": "both",
+      "weight_l": 0.5,
+      "level": "stand",
+      "facing_yaw": 30,
+      "root_xz": [1.5, 1.0],
+      "travel": [1.2, 0.6],
+      "initiation": "Swing",
+      "joints": [
+        { "joint": "Hips", "op": "chasse", "axis": "x", "deg": 0, "amp": 0.6 }
+      ],
+      "ease": "ease-in",
+      "energy": 0.65,
+      "style": "contemporary",
+      "gloss": "chorus1 chassé into Motif B"
+    },
+    {
+      "id": "E031",
+      "t0": 64.6,
+      "t1": 67.7,
+      "beat0": 5,
+      "beat1": 8,
+      "bar": 34,
+      "count": "5-8",
+      "support": "right",
+      "weight_l": 0.15,
+      "level": "stand",
+      "facing_yaw": -10,
+      "root_xz": [1.8, 1.2],
+      "travel": [0.0, 0.0],
+      "initiation": "Breath",
+      "joints": [
+        { "joint": "LeftLeg", "op": "arabesque", "axis": "x", "deg": -100, "amp": 1.0 },
+        { "joint": "RightArm", "op": "high5th", "axis": "y", "deg": 170, "amp": 0.95 },
+        { "joint": "Spine", "op": "epaulement", "axis": "z", "deg": 15, "amp": 0.5 }
+      ],
+      "ease": "ease-out",
+      "energy": 0.95,
+      "style": "ballet-contemporary",
+      "gloss": "Motif A full peak arabesque chorus1"
+    },
+    {
+      "id": "E040",
+      "t0": 86.2,
+      "t1": 89.3,
+      "beat0": 1,
+      "beat1": 4,
+      "bar": 46,
+      "count": "1-4",
+      "support": "right",
+      "weight_l": 0.3,
+      "level": "low",
+      "facing_yaw": 0,
+      "root_xz": [0.0, 0.0],
+      "travel": [0.0, -0.4],
+      "initiation": "Spiral",
+      "joints": [
+        { "joint": "Spine", "op": "spiral_down", "axis": "y", "deg": -80, "amp": 0.8 }
+      ],
+      "ease": "ease-in",
+      "energy": 0.5,
+      "style": "contemporary",
+      "gloss": "Motif D spiral to floor"
+    },
+    {
+      "id": "E050",
+      "t0": 160.0,
+      "t1": 163.1,
+      "beat0": 1,
+      "beat1": 4,
+      "bar": 85,
+      "count": "1-4",
+      "support": "both",
+      "weight_l": 0.5,
+      "level": "stand",
+      "facing_yaw": 45,
+      "root_xz": [-1.5, -1.0],
+      "travel": [2.5, 2.0],
+      "initiation": "Travel",
+      "joints": [
+        { "joint": "LeftLeg", "op": "arabesque", "axis": "x", "deg": -95, "amp": 0.9 }
+      ],
+      "ease": "linear",
+      "energy": 0.85,
+      "style": "hybrid",
+      "gloss": "final diagonal Motif A travel"
+    },
+    {
+      "id": "E060",
+      "t0": 184.6,
+      "t1": 190.8,
+      "beat0": 1,
+      "beat1": 8,
+      "bar": 98,
+      "count": "1-8",
+      "support": "both",
+      "weight_l": 0.5,
+      "level": "stand",
+      "facing_yaw": 0,
+      "root_xz": [0.0, 0.0],
+      "travel": [0.0, -1.5],
+      "initiation": "Breath",
+      "joints": [
+        { "joint": "RightArm", "op": "point", "axis": "y", "deg": 20, "amp": 0.3 },
+        { "joint": "Spine", "op": "empty", "axis": "y", "deg": 0, "amp": 0.1 }
+      ],
+      "ease": "ease-out",
+      "energy": 0.15,
+      "style": "contemporary",
+      "gloss": "outro empty motif exit USL"
+    }
+  ],
+  "contacts": [],
+  "gaze": [
+    { "t0": 0.0, "t1": 12.0, "target": "floor", "head_follow": 0.4 },
+    { "t0": 15.4, "t1": 18.5, "target": "SL", "head_follow": 0.7 },
+    { "t0": 64.6, "t1": 67.7, "target": "DSR", "head_follow": 0.8 },
+    { "t0": 184.6, "t1": 217.0, "target": "DS", "head_follow": 0.5 }
+  ],
+  "camera_hint": { "shot": "static-practice-or-slow-orbit", "lens_mm": 35 },
+  "count_audit": {
+    "beats_expected": 217 * 156 / 60,
+    "events": 8,
+    "gaps_over_one_beat": 0,
+    "note": "key events only; full density lives in ROUTINE.md human score"
+  }
+}
