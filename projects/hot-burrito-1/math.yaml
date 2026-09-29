@@ -1,0 +1,119 @@
+project: Hot Burrito #1
+
+state_dimensions:
+  - restraint
+  - instability
+  - extension
+  - groove
+  - floor_proximity
+  - eccentricity
+  - travel
+  - release
+
+# Normalised 0..1 targets sampled over dramaturgical phase rather than
+# hard-coded seconds. The music analyser maps these phases to the recording.
+phases:
+  - name: composure
+    u: 0.00
+    target:
+      restraint: 0.92
+      instability: 0.18
+      extension: 0.20
+      groove: 0.35
+      floor_proximity: 0.10
+      eccentricity: 0.28
+      travel: 0.22
+      release: 0.12
+
+  - name: disturbance
+    u: 0.18
+    target:
+      restraint: 0.76
+      instability: 0.42
+      extension: 0.30
+      groove: 0.42
+      floor_proximity: 0.16
+      eccentricity: 0.48
+      travel: 0.38
+      release: 0.28
+
+  - name: opening
+    u: 0.34
+    target:
+      restraint: 0.44
+      instability: 0.58
+      extension: 0.86
+      groove: 0.34
+      floor_proximity: 0.12
+      eccentricity: 0.52
+      travel: 0.66
+      release: 0.44
+
+  - name: groove
+    u: 0.50
+    target:
+      restraint: 0.55
+      instability: 0.46
+      extension: 0.38
+      groove: 0.82
+      floor_proximity: 0.26
+      eccentricity: 0.72
+      travel: 0.76
+      release: 0.32
+
+  - name: break
+    u: 0.68
+    target:
+      restraint: 0.18
+      instability: 0.90
+      extension: 0.54
+      groove: 0.28
+      floor_proximity: 0.86
+      eccentricity: 0.78
+      travel: 0.46
+      release: 0.94
+
+  - name: suspended_aftershock
+    u: 0.82
+    target:
+      restraint: 0.36
+      instability: 0.68
+      extension: 0.92
+      groove: 0.18
+      floor_proximity: 0.22
+      eccentricity: 0.62
+      travel: 0.42
+      release: 0.58
+
+  - name: unresolved_end
+    u: 1.00
+    target:
+      restraint: 0.72
+      instability: 0.34
+      extension: 0.18
+      groove: 0.12
+      floor_proximity: 0.12
+      eccentricity: 0.42
+      travel: 0.08
+      release: 0.20
+
+equations:
+  delayed_response: "R(t) = M(t - tau(t))"
+  momentum_continuity: "C(t) = cos(P(t-1), P(t))"
+  gesture_propagation: "wrist -> elbow -> shoulder -> ribs -> pelvis -> step"
+  candidate_objective: "J = 0.18*momentum + 0.16*weight + 0.15*music + 0.10*gesture + 0.09*asymmetry + 0.08*lag + 0.08*suspension + 0.08*contrast + 0.08*interestingness - penalties"
+
+motif_dynamics:
+  delayed_wrist:
+    propagation_delays_ms: [0, 90, 170, 260, 360, 480]
+    scale_growth: [0.08, 0.10, 0.16, 0.30, 0.52, 0.78]
+
+  almost_step:
+    support_margin_curve: [0.40, 0.18, 0.03, -0.08, 0.04, 0.32]
+    rule: "permit COM to cross support boundary, then require catch-step recovery"
+
+  beautiful_then_wrong:
+    extension_peak: 0.94
+    suspension_peak: 0.90
+    fracture_delay_ms: 240
+    fracture_joint_priority: [wrist, elbow, ribs]
