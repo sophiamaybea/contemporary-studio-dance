@@ -1,0 +1,129 @@
+title: If There's Such a Thing as Love
+artist: The Magnetic Fields
+recording: i (2004)
+duration_reference: "2:57"
+format: solo contemporary dance
+profile: references/corpus-001/style-profile.yaml
+
+intent: |
+  Create an original solo contemporary-dance work for The Magnetic Fields'
+  "If There's Such a Thing as Love".
+
+  The governing idea is uncertainty becoming briefly physical certainty and
+  then dissolving again.
+
+  The dancer should seem to test propositions with the body:
+  step toward / withdraw,
+  offer / retract,
+  suspend / abandon,
+  settle / disturb.
+
+  Do not mime romance or lyrics. Avoid yearning reaches, chest-clutching,
+  wistful gazing, conventional lyrical sadness, or a tidy romantic resolution.
+
+  The piece should be intelligent, dry, tender and slightly peculiar.
+  Small actions should matter as much as large technical movement.
+
+  Use the Reference Corpus 001 language:
+    - torso-led spirals
+    - delayed limbs
+    - asymmetric balances
+    - technically large extensions hidden inside transitions
+    - weighted walking
+    - groove beneath the phrase
+    - crooked shapes
+    - sudden shifts from ordinary behaviour into dance
+    - momentum-driven floor contact
+    - suspension that never becomes a pose
+
+  Let the choreography repeatedly form a convincing physical idea and then
+  undermine it.
+
+  The final state should not answer whether love exists. It should leave the
+  dancer in a physically plausible but unresolved equilibrium.
+
+anchors:
+  - id: hypothesis
+    dialect_mix: {FLOAT: 0.25, FRACTURE: 0.25, RELEASE: 0.10, TRAVEL: 0.40}
+    local_intent: |
+      Begin with ordinary weighted walking and small directional tests.
+      Each pathway starts decisively but changes its mind before completion.
+      Keep the arms relatively quiet; let the ribs and pelvis make the first
+      contradictions.
+
+  - id: first_evidence
+    dialect_mix: {FLOAT: 0.45, FRACTURE: 0.15, RELEASE: 0.10, TRAVEL: 0.30}
+    local_intent: |
+      A repeated small gesture propagates into the whole body and unexpectedly
+      produces one beautiful suspended line. Do not hold it. Let a delayed
+      elbow or wrist spoil the geometry and redirect the body.
+
+  - id: doubt_returns
+    dialect_mix: {FLOAT: 0.15, FRACTURE: 0.45, RELEASE: 0.15, TRAVEL: 0.25}
+    local_intent: |
+      Break pathways into partial actions. Use off-axis catches, interrupted
+      turns and asymmetrical footwork. Permit a slightly comic or matter-of-
+      fact quality rather than melodrama.
+
+  - id: orbit
+    dialect_mix: {FLOAT: 0.30, FRACTURE: 0.20, RELEASE: 0.10, TRAVEL: 0.40}
+    local_intent: |
+      Build a circular travelling phrase that repeatedly passes near the same
+      spatial point without arriving there. Let momentum accumulate each pass.
+      The body should feel drawn toward a centre it refuses to occupy.
+
+  - id: proof_body
+    dialect_mix: {FLOAT: 0.55, FRACTURE: 0.10, RELEASE: 0.10, TRAVEL: 0.25}
+    local_intent: |
+      Give the dancer the strongest technical phrase of the work: extension,
+      suspension and travelling turn generated from prior momentum. For a brief
+      interval, the body behaves as if it believes its own proposition.
+
+  - id: contradiction
+    dialect_mix: {FLOAT: 0.15, FRACTURE: 0.35, RELEASE: 0.35, TRAVEL: 0.15}
+    local_intent: |
+      Interrupt the established physical logic. A support failure or torso
+      contraction should force a low-level phrase. Floor contact is a
+      consequence of instability, not an emotional pose.
+
+  - id: unresolved_equilibrium
+    dialect_mix: {FLOAT: 0.30, FRACTURE: 0.25, RELEASE: 0.15, TRAVEL: 0.30}
+    local_intent: |
+      Return fragments of the opening walk and orbit, now quieter. Let the
+      body find a temporary equilibrium with one joint or direction still
+      unresolved. Finish without a final pose or emotional declaration.
+
+motifs:
+  - name: proposition
+    description: |
+      A small forward action begins with apparent certainty, then a delayed
+      upper-body response changes the destination before the step completes.
+
+  - name: orbit_without_arrival
+    description: |
+      Repeated curved travel approaches the same spatial centre from different
+      angles but never lands on it.
+
+  - name: proof_then_error
+    description: |
+      A highly coherent technical line forms, then one distal joint fractures
+      the shape and converts it into the next phrase.
+
+critic_overrides:
+  reward:
+    uncertainty_to_commitment: very_high
+    momentum_causality: very_high
+    asymmetry: high
+    delayed_arrival: high
+    eccentricity: medium_high
+    technical_continuity: high
+    spatial_recurrence: high
+
+  penalise:
+    generic_lyrical: very_high
+    literal_lyric_mime: very_high
+    romantic_pantomime: very_high
+    chest_clutching: very_high
+    pleading_reach: very_high
+    final_romantic_resolution: very_high
+    pose_reset_pose: very_high
